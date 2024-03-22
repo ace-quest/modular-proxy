@@ -1,0 +1,159 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "zAce",
+  "sourceName": "contracts/zAce.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "AddressEmptyCode",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "ERC1967InvalidImplementation",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC1967NonPayable",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FailedInnerCall",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "modName",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "prevModAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "nextModAddress",
+          "type": "address"
+        }
+      ],
+      "name": "InvalidModuleAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "modName",
+          "type": "string"
+        }
+      ],
+      "name": "ModuleNotExists",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes4",
+          "name": "sig",
+          "type": "bytes4"
+        }
+      ],
+      "name": "ModuleFunctionAttached",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes4",
+          "name": "sig",
+          "type": "bytes4"
+        }
+      ],
+      "name": "ModuleFunctionDetached",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "module",
+          "type": "address"
+        }
+      ],
+      "name": "ModuleUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "Upgraded",
+      "type": "event"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    }
+  ],
+  "bytecode": "0x608060405260405161046a38038061046a8339810160408190526100229161026c565b818161002e8282610037565b50505050610356565b61004082610096565b6040516001600160a01b038316907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a280511561008a576100858282610112565b505050565b610092610189565b5050565b806001600160a01b03163b6000036100d157604051634c9c8ce360e01b81526001600160a01b03821660048201526024015b60405180910390fd5b7f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc80546001600160a01b0319166001600160a01b0392909216919091179055565b6060600080846001600160a01b03168460405161012f919061033a565b600060405180830381855af49150503d806000811461016a576040519150601f19603f3d011682016040523d82523d6000602084013e61016f565b606091505b5090925090506101808583836101aa565b95945050505050565b34156101a85760405163b398979f60e01b815260040160405180910390fd5b565b6060826101bf576101ba82610209565b610202565b81511580156101d657506001600160a01b0384163b155b156101ff57604051639996b31560e01b81526001600160a01b03851660048201526024016100c8565b50805b9392505050565b8051156102195780518082602001fd5b604051630a12f52160e11b815260040160405180910390fd5b634e487b7160e01b600052604160045260246000fd5b60005b8381101561026357818101518382015260200161024b565b50506000910152565b6000806040838503121561027f57600080fd5b82516001600160a01b038116811461029657600080fd5b60208401519092506001600160401b03808211156102b357600080fd5b818501915085601f8301126102c757600080fd5b8151818111156102d9576102d9610232565b604051601f8201601f19908116603f0116810190838211818310171561030157610301610232565b8160405282815288602084870101111561031a57600080fd5b61032b836020830160208801610248565b80955050505050509250929050565b6000825161034c818460208701610248565b9190910192915050565b610105806103656000396000f3fe6080604052600a600c565b005b60186014601a565b609e565b565b600080356001600160e01b03191681527f3619734fad8f6b303a1cd5b2fe8b4f2bac0a6b120c1b4ab21b3a2db144ca6901602090815260408083205483527f3619734fad8f6b303a1cd5b2fe8b4f2bac0a6b120c1b4ab21b3a2db144ca69009091528120546001600160a01b03168015609257806098565b609860c1565b91505090565b3660008037600080366000845af43d6000803e80801560bc573d6000f35b3d6000fd5b600060f37f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b031690565b90509056fea164736f6c6343000814000a",
+  "deployedBytecode": "0x6080604052600a600c565b005b60186014601a565b609e565b565b600080356001600160e01b03191681527f3619734fad8f6b303a1cd5b2fe8b4f2bac0a6b120c1b4ab21b3a2db144ca6901602090815260408083205483527f3619734fad8f6b303a1cd5b2fe8b4f2bac0a6b120c1b4ab21b3a2db144ca69009091528120546001600160a01b03168015609257806098565b609860c1565b91505090565b3660008037600080366000845af43d6000803e80801560bc573d6000f35b3d6000fd5b600060f37f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b031690565b90509056fea164736f6c6343000814000a",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

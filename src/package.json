@@ -1,0 +1,10 @@
+{
+  "name": "@ace-quest/modular-proxy",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "zAce/index.js",
+  "peerDependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "@openzeppelin/hardhat-upgrades": "^1.0.0"
+  }
+}

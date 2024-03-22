@@ -1,0 +1,13 @@
+**/.openzeppelin
+**/.vscode
+
+**/node_modules
+
+# Hardhat task generated files
+**/artifacts
+**/cache
+**/build
+**/dist
+
+*.env
+*.log
